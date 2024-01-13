@@ -43,17 +43,20 @@ const person = {
     age: 26
 }
 
-// Shandow copy clone
-// const copyPerson = person;
-// copyPerson.age = 29 // this property also exist in orignal obj
-// // thats y in shadow clone they share same mem refrence
-// console.log(person)
+// // Shallow Cloning
+// const originalShallow = { key1: 'value1', key2: { nestedKey: 'nestedValue' } };
+// const clonedShallow = { ...originalShallow };
+// clonedShallow.key2.nestedKey = 'modifiedValue';
 
-//deep copy clone 
-const deepCopy = JSON.parse(JSON.stringify(person))
-deepCopy.age = 30
-console.log(deepCopy)// in deep orignal obj values not going to change as deepcopy clone
-// creates true clone  not ref clone
+// console.log(originalShallow.key2.nestedKey); // Output: 'modifiedValue'
+
+// // Deep Cloning
+// const originalDeep = { key1: 'value1', key2: { nestedKey: 'nestedValue' } };
+// const clonedDeep = JSON.parse(JSON.stringify(originalDeep));
+// clonedDeep.key2.nestedKey = 'modifiedValue';
+
+// console.log(originalDeep.key2.nestedKey); // Output: 'nestedValue'
+
 
 
 

@@ -308,3 +308,44 @@ const result = capitalizeFirstLetter(string);
 // }
 
 // console.log(checkPalindrome('malayalam'));
+
+
+// File Name: string_operations.js
+
+// Function: Count Vowels in a String
+const str = "Hello, World!";
+
+const countVowels = (str) => {
+    let strA = str.split('');
+    let count = 0;
+    for (var i = 0; i < strA.length; i++) {
+        if (strA[i] === 'a' || strA[i] === 'e' || strA[i] === 'i' || strA[i] === 'o' || strA[i] === 'u') {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countVowels(str));
+
+// Function: Find Non-Repeating Character in a String
+const findNonRepeatChar = (str) => {
+    let strA = str.split('');
+    let isRepeated = false;
+    let char = "";
+    for (let i = 0; i < strA.length; i++) {
+        for (let j = i + 1; j < strA.length; j++) {
+            if (strA[i] === strA[j]) {
+                isRepeated = true;
+                break;
+            }
+        }
+        if (!isRepeated) {
+            char = strA[i];
+            break;
+        }
+    }
+    return char;
+}
+
+console.log(findNonRepeatChar("aabcc"));

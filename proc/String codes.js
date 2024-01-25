@@ -349,3 +349,20 @@ const findNonRepeatChar = (str) => {
 }
 
 console.log(findNonRepeatChar("aabcc"));
+
+var string = "Welcome to this Javascript Guide!";
+//output: - 'emocleW ot siht tpircsavaJ !ediuG'
+
+function revStr(s) {
+    let spl = s.split(" ")
+    let words = [];
+    let wod = [];
+    for (let index = 0; index < spl.length; index++) {
+        words = spl[index].split("").reverse()
+        wod.push(words.join(""))
+    }
+    console.log(wod.join(" "))
+
+}
+
+revStr(string)
